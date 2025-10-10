@@ -9,4 +9,5 @@ t_no * constroi_no(int n){
         ponteiro_novo_no->prox= NULL;
         //verificacao de erro para o pont retornar null
      }
+     return ponteiro_novo_no;
 }
