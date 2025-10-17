@@ -57,6 +57,7 @@ int insere_fim(int i, t_lista *l){
         }
         aux->prox = novo;
     }
+    l->tamanho--;
        return SUCESSO;
 }
 
@@ -77,5 +78,6 @@ int remove_fim(t_lista *l, int *i){
         free(aux->prox);
         aux->prox = NULL;
     }
+    l->tamanho--;
     return SUCESSO;
 }
