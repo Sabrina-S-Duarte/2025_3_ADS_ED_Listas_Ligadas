@@ -40,6 +40,42 @@ void exibe_lista (t_lista *l){
             printf("[%d] -> \n", aux->info);
             aux = aux->prox;
         }
-        printf("//\n");
+        printf("*********************************\n");
     }
+}
+
+int insere_fim(int i, t_lista *l){
+    t_no * novo = constroi_no(i);
+    if(novo == NULL) return FRACASSO;
+    if(esta_vazia(l)){
+    l->primeiro = novo;
+    }
+    else {
+        t_no * aux = l->primeiro;
+        while(aux->prox != NULL){//vai ate o ultimo elemento
+            aux = aux->prox;
+        }
+        aux->prox = novo;
+    }
+       return SUCESSO;
+}
+
+int remove_fim(t_lista *l, int *i){
+    if(esta_vazia(l)) return FRACASSO;
+    if(l->primeiro->prox == NULL){//verifica se só tem uma caixinha só
+        *i = l->primeiro->info;
+        free(l->primeiro);
+        l->primeiro = NULL;
+    }
+
+    else{ //se tiver pelo menos 2 elementos
+        t_no * aux = l->primeiro;
+        while(aux->prox->prox != NULL){
+            aux = aux->prox;
+        }
+        *i = aux->prox->info;
+        free(aux->prox);
+        aux->prox = NULL;
+    }
+    return SUCESSO;
 }

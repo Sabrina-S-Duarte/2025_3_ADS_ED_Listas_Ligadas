@@ -1,0 +1,11 @@
+17/10/2025
+
+Abastrações-----------
+-pilha
+-fila
+
+
+Alocação em memoria -----------------
+- vetor (sequencial)
+- lista ligada
+

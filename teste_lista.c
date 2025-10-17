@@ -25,6 +25,14 @@ int main (){
         printf("Falha na remocao de inicio\n");
     }
 
+    insere_fim(15, &l);
+    insere_fim(25, &l);
+    insere_fim(35, &l);
+    printf("Lista depois das insercoes de fim:\n");
+    exibe_lista(&l);
+    if(remove_fim(&l, &excluido)){
+        printf("");
+    }
 
 
     return 0;
