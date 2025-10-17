@@ -13,3 +13,5 @@ int esta_vazia(t_lista *);
 
 int insere_inicio(int, t_lista *);
 int remove_inicio(t_lista *, int *);
+
+void exibe_lista (t_lista *);

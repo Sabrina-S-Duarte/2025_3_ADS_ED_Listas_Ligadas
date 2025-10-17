@@ -29,3 +29,17 @@ int remove_inicio(t_lista *l, int *i){
             free(temp_ponteiro);
             return SUCESSO;
 }
+
+void exibe_lista (t_lista *l){
+    if(esta_vazia(l)) {
+    printf("Lista vazia...\n");
+    }
+    else {
+        struct no * aux = l->primeiro;
+        while (aux != NULL){
+            printf("[%d] -> \n", aux->info);
+            aux = aux->prox;
+        }
+        printf("//\n");
+    }
+}
